@@ -3,7 +3,6 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {API} from '../constants/api_constant';
 import { useNavigate } from 'react-router-dom';
-// import UpdateFootballDataForm from './update_form';
 
 function FootballStats() {
   const [footballData, setFootballData] = useState([]);
