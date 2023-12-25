@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useLocation } from 'react-router-dom';
+import { useLocation,useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const UpdateFootballDataForm = () => {
     const location = useLocation();
+    const navigator = useNavigate();
     const data = location.state;
     // console.log(data._id);
   const [formData, setFormData] = useState({
@@ -34,6 +35,7 @@ const UpdateFootballDataForm = () => {
       const response = await axios.post('http://localhost:5000/football/update/'+data._id, formData);
       if(response.data.success === true){
         alert("Data updated successfully.")
+        navigator('/show')
       }else{
         alert(response.data.data)
       }

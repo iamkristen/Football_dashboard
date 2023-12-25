@@ -33,7 +33,7 @@ function Dashboard(){
       };
 
       const handleAverageGoalsClick = () => {
-        navigate('/show');
+        navigate('/average_goal');
       };
 
 

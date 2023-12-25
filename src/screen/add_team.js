@@ -32,7 +32,7 @@ const AddFootballDataForm = () => {
       const response = await axios.post('http://localhost:5000/football/add/', formData);
       console.log('Success:', response.data);
       alert("Data created successfully.")
-      navigate('/')
+      navigate('/show')
 
       
     } catch (error) {
